@@ -6,7 +6,7 @@ export default function HomeScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <BlurView
-        intensity={5} // Approximates blur(2px)
+        intensity={5}
         tint="light"
         style={{
           width: 200,
@@ -17,7 +17,7 @@ export default function HomeScreen() {
           alignItems: 'center',
         }}
       >
-        <Text style={{ color: '#000' }}>2px Apple Blur</Text>
+        <Text style={{ color: '#000' }}>Promteli App</Text>
       </BlurView>
     </View>
   );
