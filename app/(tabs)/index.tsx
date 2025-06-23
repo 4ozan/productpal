@@ -5,8 +5,10 @@ import {
     ScrollView,
     StyleSheet,
     Text,
-    TextInput
+    TextInput,
+    View 
 } from 'react-native';
+ 
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 export default function HomeScreen () {
@@ -67,20 +69,27 @@ export default function HomeScreen () {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
-        <TextInput
-          style={styles.input}
-          onChangeText={setText}
-          value={text}
-          placeholder="ask me anything"
-        />
-        <Button title="push" onPress={fetchData} />
-        {loading ? (
+
+        <Text 
+        style={{
+            display:'flex', justifyContent:'center', fontFamily:'sans-serif', fontSize:20
+
+        }}>Get effortless Advice</Text>
+        <View style={styles.contentAreaWrapper}>{loading ? (
           <Text style={styles.loading}>Loading...</Text>
         ) : (
           <ScrollView style={styles.responseContainer}>
             <Text style={styles.responseText}>{responseText}</Text>
           </ScrollView>
-        )}
+        )}</View>
+        <TextInput
+          style={styles.input}
+          onChangeText={setText}
+          value={text}
+          placeholder="just ask ..."
+          multiline
+        />
+        <Button title="request" onPress={fetchData} />
       </SafeAreaView>
     </SafeAreaProvider>
   );
@@ -88,8 +97,8 @@ export default function HomeScreen () {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    padding: 16
+    flex:1,
+    padding: 16,
   },
   input: {
     height: 40,
@@ -98,6 +107,17 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 6
   },
+  contentAreaWrapper: {
+  marginTop: 20,
+  minHeight: 300, 
+  backgroundColor: '#e9e9e9',
+  borderRadius: 8,
+  padding: 10,
+  borderWidth: 1,
+  borderColor: '#ddd',
+  justifyContent: 'center',
+  alignItems: 'center',
+},
   loading: {
     marginTop: 16,
     fontSize: 16,

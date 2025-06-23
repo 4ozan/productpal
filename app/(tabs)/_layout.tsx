@@ -9,8 +9,7 @@ import { Platform } from 'react-native';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
-
-  return (
+return (
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
@@ -30,13 +29,6 @@ export default function TabLayout() {
           title: "Home",
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
         }}
-      />
-      <Tabs.Screen
-      name="landing-Tab"
-      options={{
-         title:"landing",
-         tabBarIcon:({color}) => <IconSymbol size={28} name="paperplane.fill" color={color} />
-      }}
       />
     </Tabs>
   );
