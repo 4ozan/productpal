@@ -72,9 +72,9 @@ export default function HomeScreen () {
 
         <Text 
         style={{
-            display:'flex', justifyContent:'center', fontFamily:'sans-serif', fontSize:20
+            display:'flex', justifyContent:'center', fontFamily:'sans-serif', fontSize:20, textShadowColor:'black', textShadowOffset:{width:0, height:1}, textShadowRadius:2
 
-        }}>Get effortless Advice</Text>
+        }}>Talk with Sam Altman</Text>
         <View style={styles.contentAreaWrapper}>{loading ? (
           <Text style={styles.loading}>Loading...</Text>
         ) : (
@@ -89,7 +89,7 @@ export default function HomeScreen () {
           placeholder="just ask ..."
           multiline
         />
-        <Button title="request" onPress={fetchData} />
+        <Button title="ask" onPress={fetchData} />
       </SafeAreaView>
     </SafeAreaProvider>
   );
@@ -105,7 +105,9 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     borderWidth: 1,
     padding: 10,
-    borderRadius: 6
+    borderRadius: 6,
+    fontFamily:'sans-serif',
+    borderColor:'#ddd'
   },
   contentAreaWrapper: {
   marginTop: 20,
