@@ -24,7 +24,7 @@ return (
         }),
       }}>
       <Tabs.Screen
-        name="sama"
+        name="chat"
         options={{
           title: "Home",
           tabBarIcon: () => <IconSymbol size={28} name="person.fill" color="#AB6400" />,

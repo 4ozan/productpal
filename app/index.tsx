@@ -1,23 +1,24 @@
 import { useRouter } from "expo-router";
 import React from "react";
 import { Button, ImageBackground, StyleSheet, Text, View } from "react-native";
+
+
 const LandingScreen: React.FC = () => {
   const router = useRouter();
 
-  const navigateToApp = () => {
-    router.replace("/(tabs)");
-  };
+  const navigateToApp = ()  => {
+    router.push("/(tabs)")
+  }
 
   return (
     <ImageBackground
-        source={{
-          uri: "https://i.pinimg.com/736x/71/c2/b0/71c2b0ff585bbd8ae8419327c0255df1.jpg"}}
+      source={{ uri: "https://i.pinimg.com/736x/71/c2/b0/71c2b0ff585bbd8ae8419327c0255df1.jpg"}}
         resizeMode="stretch"
         style={styles.image}
       >
     <View style={styles.container}>
       
-      <Text style={styles.title}>Chat with SAM ALTMAN</Text>
+      <Text style={styles.title}>Mentorship with SAM ALTMAN</Text>
       <Button title="Start chatting" onPress={navigateToApp} />
    
     </View>
