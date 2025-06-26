@@ -69,12 +69,6 @@ export default function HomeScreen () {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
-
-        <Text 
-        style={{
-            display:'flex', justifyContent:'center', fontFamily:'sans-serif', fontSize:20, textShadowColor:'black', textShadowOffset:{width:0, height:1}, textShadowRadius:2
-
-        }}>Talk with Sam Altman</Text>
         <View style={styles.contentAreaWrapper}>{loading ? (
           <Text style={styles.loading}>Loading...</Text>
         ) : (
@@ -98,16 +92,23 @@ export default function HomeScreen () {
 const styles = StyleSheet.create({
   container: {
     flex:1,
-    padding: 16,
+    padding: 30,
+    backgroundColor:'#1C1C1C',
   },
   input: {
     height: 40,
+    marginTop:160,
     marginBottom: 12,
     borderWidth: 1,
     padding: 10,
+    width:'100%',
     borderRadius: 6,
     fontFamily:'sans-serif',
-    borderColor:'#ddd'
+    borderColor:'#ffffff',
+    borderTopEndRadius:10,
+    borderTopStartRadius:10,
+    borderBottomEndRadius:0,
+    borderBottomStartRadius:0,
   },
   contentAreaWrapper: {
   marginTop: 20,
@@ -126,12 +127,15 @@ const styles = StyleSheet.create({
     color: 'gray'
   },
   responseContainer: {
-    marginTop: 20,
-    maxHeight: 300
+    marginTop: 40,
+    maxHeight: 300,
+    marginBottom: 12,
+    backgroundColor:'#FAF8F6',
+
   },
   responseText: {
     fontSize: 16,
-    color: 'black'
+    color: 'white'
   }
 });
 

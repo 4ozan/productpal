@@ -1,6 +1,6 @@
-import React from "react";
-import { View, ImageBackground, Text, Button, StyleSheet } from "react-native";
 import { useRouter } from "expo-router";
+import React from "react";
+import { Button, ImageBackground, StyleSheet, Text, View } from "react-native";
 const LandingScreen: React.FC = () => {
   const router = useRouter();
 
@@ -9,17 +9,19 @@ const LandingScreen: React.FC = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <ImageBackground
+    <ImageBackground
         source={{
-          uri: "https://images.unsplash.com/photo-1535909339361-9fef1f0ef41f?auto=format&fit=crop&w=800&q=80",
-        }}
+          uri: "https://i.pinimg.com/736x/71/c2/b0/71c2b0ff585bbd8ae8419327c0255df1.jpg"}}
+        resizeMode="stretch"
         style={styles.image}
       >
-      <Text style={styles.title}>Landing</Text>
+    <View style={styles.container}>
+      
+      <Text style={styles.title}>Chat with SAM ALTMAN</Text>
       <Button title="Start chatting" onPress={navigateToApp} />
-      </ImageBackground>
+   
     </View>
+    </ImageBackground>
   );
 };
 
@@ -34,6 +36,9 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     marginBottom: 16,
+    fontFamily:'sans-serif-thin',
+    fontWeight:'bold',
+    color:'white'
   },
   image: {
     flex:1,
