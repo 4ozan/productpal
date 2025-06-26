@@ -24,10 +24,10 @@ return (
         }),
       }}>
       <Tabs.Screen
-        name="index"
+        name="sama"
         options={{
           title: "Home",
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarIcon: () => <IconSymbol size={28} name="person.fill" color="#AB6400" />,
         }}
       />
     </Tabs>

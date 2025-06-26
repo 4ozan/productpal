@@ -83,7 +83,7 @@ export default function HomeScreen () {
           placeholder="just ask ..."
           multiline
         />
-        <Button title="ask" onPress={fetchData} />
+        <Button color="#AB6400" title="ask" onPress={fetchData} />
       </SafeAreaView>
     </SafeAreaProvider>
   );
