@@ -1,12 +1,12 @@
 import { BASE_URL } from '@/config/config';
 import React from 'react';
 import {
-    Button,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TextInput,
-    View 
+  Button,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View
 } from 'react-native';
  
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
   container: {
     flex:1,
     padding: 30,
-    backgroundColor:'#1C1C1C',
+    backgroundColor:'white',
   },
   input: {
     height: 40,
@@ -113,11 +113,8 @@ const styles = StyleSheet.create({
   contentAreaWrapper: {
   marginTop: 20,
   minHeight: 300, 
-  backgroundColor: '#e9e9e9',
   borderRadius: 8,
   padding: 10,
-  borderWidth: 1,
-  borderColor: '#ddd',
   justifyContent: 'center',
   alignItems: 'center',
 },
@@ -128,14 +125,13 @@ const styles = StyleSheet.create({
   },
   responseContainer: {
     marginTop: 40,
-    maxHeight: 300,
+    height: 400,
     marginBottom: 12,
-    backgroundColor:'#FAF8F6',
 
   },
   responseText: {
     fontSize: 16,
-    color: 'white'
+    color: 'black'
   }
 });
 
